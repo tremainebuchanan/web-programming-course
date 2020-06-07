@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.login-form{
+    width: 250px;
+    height: auto;
+    margin: auto;
+}
+
+.login-form h1{
+    text-align: center;
+}
+
+.login-form input{
+    margin-bottom: 12px;
+}
+
+pre{
+    background-color: gray;
+    color: #ffffff;
+    text-align: left;
+}
