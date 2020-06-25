@@ -3,7 +3,6 @@
 // https://www.php.net/manual/en/control-structures.if.php - if statement
 $config = include('configs/db.php');
 $database = $config['database'];
-$showError = false;
 try{
     // create connection to the database using database credentials.
     $pdo = new PDO("mysql:host=". $database['host']
@@ -20,8 +19,7 @@ try{
         $statement->bindParam(':last_name', $last_name);
         $statement->bindParam(':email', $email);
         $statement->execute();
-        header("Location: ../index.php", true, 303);
-        
+        header("Location: ../index.php", true, 303);        
     }
 } catch(PDOException $e){
     echo "<h1>Error</h1>";

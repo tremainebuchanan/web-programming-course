@@ -14,9 +14,10 @@ try{
     // are thrown. 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // retrieves all records from the database
-    $list = $pdo->query("SELECT * FROM students")->fetchAll(); 
-    echo "<h1>Students (" . sizeof($list) . ")</h1>";
-    foreach ($list as $student) {
+    $sql = "SELECT `id`, `first_name`, `last_name`, `email`, `created_on`, `updated_on` FROM `students`";
+    $students = $pdo->query($sql)->fetchAll(); 
+    echo "<h1>Students (" . sizeof($students) . ")</h1>";
+    foreach ($students as $student) {
         echo $student['id'] . " " 
             .$student['first_name']. " " 
             .$student['last_name'] . " "
